@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+  </head>
+  <body>
+    <h1>{{title}}</h1>
+    <p>Welcome to my portfolio website!</p>
+    <h2>My GitHub Activity</h2>
+    {{#each activities}}
+    <div style="border: 1px solid; border-radius:10px">
+      <h5>{{this.repo.name}}</h5>
+      <p>{{this.type}} by <strong><img src={{this.actor.avatar_url}} height="15" width="15"/>{{this.actor.login}}</strong> at {{this.created_at}}</p>
+    </div>
+    {{/each}}
+  </body>
+</html>
